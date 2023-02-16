@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>로그인</title>
 </head>
 <body>
@@ -16,9 +17,9 @@
     <div class="main">
         <h2>로그인</h2>
         <form>
-            <input class="info" type="text" id="username" name="username" placeholder="아이디" required><br><br>
-            <input class="info" type="password" id="password" name="password" placeholder="비밀번호" required><br><br>
-            <input id="login" type="submit" value="로그인">
+            <input class="info" type="text" id="username" name="username" placeholder="아이디"><br><br>
+            <input class="info" type="password" id="password" name="password" placeholder="비밀번호"><br><br>
+            <input id="login" type="button" value="로그인" onclick="signin()">
         </form>
     </div>
     <div class="bottom">
@@ -26,5 +27,5 @@
             <img src="images/shinhan_ad.png">
         </div>
     </div>
-  </body>
+</body>
 </html>
