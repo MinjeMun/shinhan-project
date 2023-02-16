@@ -1,7 +1,3 @@
-function signin() {
-    window.location.href = "index.html";
-}
-
 const menuBarContainer = document.querySelector(".menu-bar-container");
 const menuBars = menuBarContainer.querySelectorAll(".menu-bar");
 let isDragging = false;
