@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/02e49749bb.js" crossorigin="anonymous"></script>
     <style>
         /* index */
         .index {
@@ -26,6 +27,12 @@
             border-collapse: collapse;
             height: 50px;
         }
+        #menu-tab {
+            background-color: #393D46;
+        }
+        #menu-tab i {
+            font-size: 20px;
+        }
         table {
             border-collapse: collapse;
             width: 200%;
@@ -40,6 +47,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: bold;
+            width: auto;
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
@@ -48,6 +56,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -61,6 +70,7 @@
         <div id="menu-wrapper">
             <table>
                 <tr>
+                    <th id="menu-tab"><a href="menu.html"><i class="fa-solid fa-bars"></i></a></th>
                     <th><a href="#">홈</a> </th>
                     <th><a href="#">관심<br>종목</a></th>
                     <th><a href="current.html">현재가</a></th>

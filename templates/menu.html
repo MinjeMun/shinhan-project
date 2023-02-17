@@ -8,18 +8,31 @@
     <title>Document</title>
     <style>
         /* body */
-        body{
-            background-size: cover;
+        body {
+            margin: 0;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
         }
 
-
+        /* portfolio btn */
+        #portfolio button {
+            background-color: transparent;
+            position: relative;
+            top: 400px;
+            border: none;
+        }
     </style>
 </head>
-<body background="images/menu_tab.png">
+<body>
     <div id="app">
-        
+        <img src="images/menu_tab.png">
+        <div id="portfolio">
+            <button>포트폴리오</button>
+        </div>
     </div>
-
     <script>
         new Vue({
             el: '#app',
