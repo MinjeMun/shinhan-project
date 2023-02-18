@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://kit.fontawesome.com/02e49749bb.js" crossorigin="anonymous"></script>
+    <title>Document</title>
     <style>
-        /* index */
-        .index {
+        /* topbar */
+        #top-wrapper {
             text-align: center;
-            display: table;
+            height: 40px;
+            font-size: 15px;
         }
-        .index img {
-            max-width: 100%;
-            max-height: 100%;
+        #main div {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
         }
-
+        #main div span {
+            font-weight: bold;
+        }
         /* menubar */
         #menu-wrapper {
             overflow-x: auto;  
@@ -60,13 +65,21 @@
         }
     </style>
 </head>
+
 <body>
     <div id="app">
-        <div class="index">
-            <div>
-                <img src="images/index.png">
-            </div>   
+        <!-- 상단바 -->
+        <div id="top=wrapper">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span>포트폴리오 생성</span>
         </div>
+        <!-- 메인 -->
+        <div id="main">
+            <div>
+                <span>문민제</span>님의 목표 자산 포트폴리오
+            </div>
+        </div>    
+        <!-- 하단 메뉴바 -->
         <div id="menu-wrapper">
             <table>
                 <tr>
@@ -97,4 +110,5 @@
         });
     </script>
 </body>
+
 </html>
