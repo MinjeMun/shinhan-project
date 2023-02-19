@@ -6,23 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/02e49749bb.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
+        body {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
         /* topbar */
         #top-wrapper {
-            text-align: center;
-            height: 40px;
+            text-align: left;
+            height: 20px;
             font-size: 15px;
         }
+        
+        /* main */
         #main div {
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
+            padding-top: 8px;
+            font-size: 16px;
         }
         #main div span {
             font-weight: bold;
         }
+        .main-top {
+            text-align: center;
+        }
+        #port-select  {
+            text-align: left;
+            margin-left: 10px;
+        }
+        #port-select button {
+            background-color: transparent;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        .my-box table {
+            width: 100%;
+        }
+        .percent {
+            width: 100px;
+            height: 25px;
+        }
+        #save {
+            text-align: center;
+            padding-bottom: 8px;
+            background-color: #4868E1;
+            margin-top: 15px;
+            color: white;
+        }
+
         /* menubar */
         #menu-wrapper {
             overflow-x: auto;  
@@ -38,26 +71,26 @@
         #menu-tab i {
             font-size: 20px;
         }
-        table {
+        #menu-wrapper table {
             background-color: #333;
             border-collapse: collapse;
             width: 200%;
             height: 43px;
         }
-        th, td {
+        #menu-wrapper th, td {
             text-align: center;
         }
-        th {
+        #menu-wrapper th {
             background-color: #333;
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 1px;
             width: auto;
         }
-        tr:nth-child(even) {
+        #menu-wrapper tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-        a {
+        #menu-wrapper a {
             color: white;
             text-decoration: none;
             font-weight: bold;
@@ -69,14 +102,75 @@
 <body>
     <div id="app">
         <!-- 상단바 -->
-        <div id="top=wrapper">
-            <i class="fa-solid fa-chevron-left"></i>
+        <div id="top-wrapper">
+            <i class="fa-solid fa-chevron-left" onclick="location.href='index.html'"></i>
             <span>포트폴리오 생성</span>
         </div>
         <!-- 메인 -->
         <div id="main">
-            <div>
+            <div class="main-top">
                 <span>문민제</span>님의 목표 자산 포트폴리오
+            </div>
+            <div class="main-top">
+                <span>[파이차트 자리]</span>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <hr>
+            </div>
+            <div id="port-select">
+                <button>목표 비율 설정</button>
+                <button>내 자산 입력</button>
+            </div>    
+            <div>
+                <div class="my-box">
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"></input></th>  
+                            <th><span>안전자산</span></th>                          
+                            <th><i class="fa-regular fa-circle-question"></i></th>
+                            <th><input type="text" class="percent" placeholder="%"></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="my-box">
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"></input></th>  
+                            <th><span>위험자산</span></th>                          
+                            <th><i class="fa-regular fa-circle-question"></i></th>
+                            <th><input type="text" class="percent" placeholder="%"></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="my-box">
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"></input></th>  
+                            <th><span>실물자산</span></th>                          
+                            <th><i class="fa-regular fa-circle-question"></i></th>
+                            <th><input type="text" class="percent" placeholder="%"></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="my-box">
+                    <table>
+                        <tr>
+                            <th><input type="checkbox"></input></th>  
+                            <th><span>대체자산</span></th>                          
+                            <th><i class="fa-regular fa-circle-question"></i></th>
+                            <th><input type="text" class="percent" placeholder="%"></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="save" onclick="">
+                <span>설정 완료</span>
             </div>
         </div>    
         <!-- 하단 메뉴바 -->
@@ -84,7 +178,7 @@
             <table>
                 <tr>
                     <th id="menu-tab"><a href="menu.html"><i class="fa-solid fa-bars"></i></a></th>
-                    <th><a href="#">홈</a> </th>
+                    <th><a href="index.html">홈</a> </th>
                     <th><a href="#">관심<br>종목</a></th>
                     <th><a href="current.html">현재가</a></th>
                     <th><a href="#">주식<br>주문</a></th>
